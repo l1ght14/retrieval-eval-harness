@@ -11,3 +11,7 @@ __pycache__/
 .pytest_cache/
 embed.log
 embed.out
+
+# coverage data is a local build artifact
+.coverage
+htmlcov/
