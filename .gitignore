@@ -1,0 +1,13 @@
+﻿# Raw BEIR download: 48 MB, and the golden set records its SHA-256 so it is
+# reproducible from build_golden.py rather than vendored.
+data/raw/
+
+# Embedding cache: ~100 MB of vectors, rebuilt by scripts/embed_corpus.py.
+# Sharded so an interrupted run resumes instead of restarting.
+.cache/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+embed.log
+embed.out

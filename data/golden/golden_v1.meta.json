@@ -1,0 +1,15 @@
+{
+  "name": "golden_v1",
+  "source": "fiqa",
+  "split": "test",
+  "corpus_sha256": "ff593e4df9933955dc3af83be0c3fa28ac7465f627e08c2e53593e734d506517",
+  "raw_files": {
+    "corpus.jsonl": "ff593e4df9933955dc3af83be0c3fa28ac7465f627e08c2e53593e734d506517",
+    "queries.jsonl": "eede1e61d4a0188940239b53ebc2da91f577a6a34679c812d1eb9090c29877bc",
+    "qrels/test.tsv": "6adc2a640dcdd22bb8b3858f89107adef2a7c3db20a63550dfa7a0f71e379e44"
+  },
+  "license": "CC BY-NC 3.0 (financial advice dataset; see the FiQA paper for terms)",
+  "citation": "Macedo, Costa & Appert, 'A Financial Dataset for Aspect-Based Sentiment Analysis of User Generated Financial News' (ESOC 2019). Distributed as the FiQA split in BEIR.",
+  "n_queries": 200,
+  "mean_relevant_per_query": 2.17
+}

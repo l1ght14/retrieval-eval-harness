@@ -1,0 +1,53 @@
+{
+  "_comment": "Minimum acceptable retrieval quality, derived from the measured baseline and set 2% below it so an identical re-run passes while a real regression fails. Raise a floor only deliberately, with the justification in the commit message.",
+  "_derivation": "floor = measured / 1.03 * 0.98  (gate passes at floor * 1.03)",
+  "configs": {
+    "bm25_128": {
+      "recall@10": 0.2573,
+      "ndcg@10": 0.2194,
+      "hit@10": 0.3806
+    },
+    "bm25_256": {
+      "recall@10": 0.2806,
+      "ndcg@10": 0.2377,
+      "hit@10": 0.4234
+    },
+    "bm25_512": {
+      "recall@10": 0.2935,
+      "ndcg@10": 0.2445,
+      "hit@10": 0.4377
+    },
+    "dense_256": {
+      "recall@10": 0.4487,
+      "ndcg@10": 0.3757,
+      "hit@10": 0.6184
+    },
+    "dense_256_rerank": {
+      "recall@10": 0.4253,
+      "ndcg@10": 0.3575,
+      "hit@10": 0.5851
+    },
+    "hybrid_256": {
+      "recall@10": 0.4421,
+      "ndcg@10": 0.3603,
+      "hit@10": 0.6089
+    },
+    "hybrid_256_rerank": {
+      "recall@10": 0.4224,
+      "ndcg@10": 0.3513,
+      "hit@10": 0.5851
+    },
+    "hybrid_256_w03": {
+      "recall@10": 0.4487,
+      "ndcg@10": 0.3741,
+      "hit@10": 0.6184
+    }
+  },
+  "relative_margin": 0.03,
+  "_margin_note": "A metric passes when it is within this fraction of its floor. Scaled rather than absolute so the gate means the same thing at recall 0.30 and 0.95.",
+  "golden": {
+    "name": "golden_v1",
+    "corpus_sha256": "ff593e4df9933955dc3af83be0c3fa28ac7465f627e08c2e53593e734d506517"
+  },
+  "_golden_note": "Corpus SHA-256 recorded when the floors were set. A mismatch means the underlying data moved and every floor is suspect until re-derived."
+}
